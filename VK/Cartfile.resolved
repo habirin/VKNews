@@ -1,0 +1,3 @@
+github "Alamofire/Alamofire" "4.6.0"
+github "SwiftyJSON/SwiftyJSON" "4.0.0"
+github "WenchaoD/FSPagerView" "0.7.1"

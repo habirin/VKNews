@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C205" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AudioAttachmentsCD" representedClassName="AudioAttachmentsCD" syncable="YES" codeGenerationType="class">
+        <attribute name="artist" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dataCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DataCD" inverseName="audioAttachmentsCD" inverseEntity="DataCD" syncable="YES"/>
+    </entity>
+    <entity name="DataCD" representedClassName="DataCD" syncable="YES" codeGenerationType="class">
+        <attribute name="authorName" attributeType="String" syncable="YES"/>
+        <attribute name="authorPhoto50" attributeType="String" syncable="YES"/>
+        <attribute name="authorPhoto100" attributeType="String" syncable="YES"/>
+        <attribute name="authorScreenName" attributeType="String" syncable="YES"/>
+        <attribute name="commentsCount" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="String" syncable="YES"/>
+        <attribute name="likesCount" attributeType="String" syncable="YES"/>
+        <attribute name="repostsCount" attributeType="String" syncable="YES"/>
+        <attribute name="text" attributeType="String" syncable="YES"/>
+        <relationship name="audioAttachmentsCD" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AudioAttachmentsCD" inverseName="dataCD" inverseEntity="AudioAttachmentsCD" syncable="YES"/>
+        <relationship name="photoAttachmentsCD" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PhotoAttachmentsCD" inverseName="dataCD" inverseEntity="PhotoAttachmentsCD" syncable="YES"/>
+        <relationship name="postDataCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PostDataCD" inverseName="dataCD" inverseEntity="PostDataCD" syncable="YES"/>
+        <relationship name="repostDataCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RepostDataCD" inverseName="dataCD" inverseEntity="RepostDataCD" syncable="YES"/>
+        <relationship name="videoAttachmentsCD" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="VideoAttachmentsCD" inverseName="dataCD" inverseEntity="VideoAttachmentsCD" syncable="YES"/>
+    </entity>
+    <entity name="NewsCD" representedClassName="NewsCD" syncable="YES" codeGenerationType="class">
+        <attribute name="favoriteNews" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="postDataCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PostDataCD" inverseName="newsCD" inverseEntity="PostDataCD" syncable="YES"/>
+        <relationship name="repostDataCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RepostDataCD" inverseName="newsCD" inverseEntity="RepostDataCD" syncable="YES"/>
+    </entity>
+    <entity name="PhotoAttachmentsCD" representedClassName="PhotoAttachmentsCD" syncable="YES" codeGenerationType="class">
+        <attribute name="photo130" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo604" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dataCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DataCD" inverseName="photoAttachmentsCD" inverseEntity="DataCD" syncable="YES"/>
+    </entity>
+    <entity name="PostDataCD" representedClassName="PostDataCD" syncable="YES" codeGenerationType="class">
+        <relationship name="dataCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DataCD" inverseName="postDataCD" inverseEntity="DataCD" syncable="YES"/>
+        <relationship name="newsCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="NewsCD" inverseName="postDataCD" inverseEntity="NewsCD" syncable="YES"/>
+    </entity>
+    <entity name="RepostDataCD" representedClassName="RepostDataCD" syncable="YES" codeGenerationType="class">
+        <relationship name="dataCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DataCD" inverseName="repostDataCD" inverseEntity="DataCD" syncable="YES"/>
+        <relationship name="newsCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="NewsCD" inverseName="repostDataCD" inverseEntity="NewsCD" syncable="YES"/>
+    </entity>
+    <entity name="VideoAttachmentsCD" representedClassName="VideoAttachmentsCD" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo130" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo320" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo640" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dataCD" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DataCD" inverseName="videoAttachmentsCD" inverseEntity="DataCD" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AudioAttachmentsCD" positionX="-16902" positionY="-1471" width="128" height="103"/>
+        <element name="DataCD" positionX="-16722" positionY="-1836" width="128" height="253"/>
+        <element name="NewsCD" positionX="-16706" positionY="-2035" width="128" height="88"/>
+        <element name="PhotoAttachmentsCD" positionX="-16677" positionY="-1471" width="128" height="103"/>
+        <element name="PostDataCD" positionX="-16911" positionY="-1935" width="128" height="73"/>
+        <element name="RepostDataCD" positionX="-16508" positionY="-1783" width="128" height="73"/>
+        <element name="VideoAttachmentsCD" positionX="-16454" positionY="-1501" width="128" height="133"/>
+    </elements>
+</model>

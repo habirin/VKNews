@@ -1,0 +1,9 @@
+{
+  "commitish" : "1.1.0",
+  "iOS" : [
+    {
+      "name" : "AACarousel",
+      "hash" : "43e4821cdecaa152486afb14dfc8baa598818f6dcc3949ded0129300721d29c9"
+    }
+  ]
+}
