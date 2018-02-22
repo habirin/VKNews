@@ -1,4 +1,0 @@
-framework module AACarousel {
-    header "AACarousel-Swift.h"
-    requires objc
-}

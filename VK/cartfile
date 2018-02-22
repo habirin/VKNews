@@ -1,3 +1,4 @@
 github "SwiftyJSON/SwiftyJSON"
 github "Alamofire/Alamofire"
 github "WenchaoD/FSPagerView"
+github "jdg/MBProgressHUD"

@@ -22,7 +22,7 @@ class PhotoAttachments {
         
     }
     init (coreDataPhotoAttach: PhotoAttachmentsCD) {
-        print(coreDataPhotoAttach.photo130)
+       
         self.photo130 = coreDataPhotoAttach.photo130!
         self.photo604 = coreDataPhotoAttach.photo604!
         self.text = coreDataPhotoAttach.text!
